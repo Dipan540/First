@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int  node,edge;
+    cin>>node>>edge;
+    vector<pair<int,pair<int,int>>>v;
+    for(int i=0; i<edge; i++)
+    {
+        int nd,ed,wt;
+        cin>>nd>>ed>>wt;
+        v.push_back({wt,{nd,ed}});
+    }
+    sort(v.begin(),v.end());
+
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<"Node1: "<<v[i].second.first<<" Node2: "<<v[i].second.second<<" Weight: "<<v[i].first<<endl;
+    }
+
+    
+
+    return 0;
+}
